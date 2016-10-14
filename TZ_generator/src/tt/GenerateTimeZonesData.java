@@ -34,7 +34,7 @@ public class GenerateTimeZonesData {
 			try {
 				if ("-src".equals(args[i])) {
 					inputFile = new File(args[++i]);
-				} else if ("-dst".equals(args[i])) {
+				} else if ("-dst".equals(args[i])) { 
 					outputDir = new File(args[++i]);
 				} else if ("-alias".equals(args[i])) {
 					aliasFile = new File(args[++i]);
@@ -330,7 +330,7 @@ public class GenerateTimeZonesData {
 		source.println("static int build_zone_info(zone_info_t * tz_info, const char * info, int info_len, const char * name, int name_len){");
 		source.println("  int rc;");
 		source.println("  char * buf = (char*) vm_malloc(4 + info_len);");
-		source.println("  memset(buf, 4 + info_len, 0);");
+		source.println("  memset(buf, 0, 4 + info_len);");
 		source.println("  memcpy(buf, name, name_len);");
 		source.println("  memcpy(&buf[4], info, info_len);");
 		source.println("  rc = tt_time_build_zone_info(tz_info, buf, 4 + info_len);");
@@ -339,7 +339,7 @@ public class GenerateTimeZonesData {
 		source.println("};");
 
 		source.println();
-		source.println("int " + treeBuilder.getMethodName() + "(zone_info_t * tz_info, char * key){");
+		source.println("int tt_time_" + treeBuilder.getMethodName() + "(zone_info_t * tz_info, char * key){");
 		buildTzSelection(source, treeBuilder);
 		source.println("  return NULL;");
 		source.println("}");
