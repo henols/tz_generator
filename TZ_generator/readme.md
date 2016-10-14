@@ -2,7 +2,7 @@
 
 The TZ generator can generate TZ data chunks and a full C file with all the data in it.
 
-Add all the required references to the locations you want to generate data for in the file TimeZones.txt
+Add all the required references to the locations you want to generate data for in the file `TimeZones.txt`.
 
 Run the `zdump_v.sh`   
 
