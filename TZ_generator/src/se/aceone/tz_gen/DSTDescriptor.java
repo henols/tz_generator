@@ -1,4 +1,4 @@
-package tt;
+package se.aceone.tz_gen;
 
 import java.util.List;
 
