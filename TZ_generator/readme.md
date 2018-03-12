@@ -10,7 +10,7 @@ A new file `zdump_v.txt` will be created.
 
 Run the generator with desired arguments ex.
 
-`java tt.GenerateTimeZonesData -src .\TZ_generator\zdump_v.txt -dst C:\tmp\tz_embed -alias .\TZ_generator\Aliases.txt`
+`java se.aceone.tz_gen.GenerateTimeZonesData -src .\TZ_generator\zdump_v.txt -dst C:\tmp\tz_embed -alias .\TZ_generator\Aliases.txt`
 
 
  
